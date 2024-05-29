@@ -15,6 +15,28 @@ A successful build results in a Docker container that is capable of running your
 The performance test suites are designed to be run from the CDP Portal.
 The CDP Platform runs test suites in much the same way it runs any other service, it takes a docker image and runs it as an ECS task, automatically provisioning infrastructure as required.
 
+## Local Testing with LocalStack
+
+Build a new Docker image with:
+```
+docker build . -t cdp-uploader-perf-tests
+```
+
+Run performance tests with:
+
+```
+docker run \
+-e S3_ENDPOINT='http://host.docker.internal:4566' \
+-e RESULTS_OUTPUT_S3_PATH='s3://my-bucket' \
+-e AWS_ACCESS_KEY_ID='test' \
+-e AWS_SECRET_ACCESS_KEY='test' \
+-e AWS_SECRET_KEY='test' \
+-e AWS_REGION='eu-west-2' \
+cdp-uploader-perf-tests
+```
+
+docker run -e S3_ENDPOINT='http://host.docker.internal:4566' -e RESULTS_OUTPUT_S3_PATH='s3://my-bucket' -e AWS_ACCESS_KEY_ID='test' -e AWS_SECRET_ACCESS_KEY='test' -e AWS_SECRET_KEY='test' -e AWS_REGION='eu-west-2' cdp-uploader-perf-tests
+
 ## Licence
 
 THIS INFORMATION IS LICENSED UNDER THE CONDITIONS OF THE OPEN GOVERNMENT LICENCE found at:
