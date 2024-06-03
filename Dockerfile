@@ -3,7 +3,6 @@ FROM defradigital/cdp-perf-test-docker:latest
 WORKDIR /opt/perftest
 
 COPY scenarios/ ./scenarios/
-COPY pictures/ ./pictures/
 COPY entrypoint.sh .
 
 ENV S3_ENDPOINT https://s3.eu-west-2.amazonaws.com
