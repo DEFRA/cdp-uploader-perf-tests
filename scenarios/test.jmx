@@ -182,12 +182,12 @@ vars.put(&quot;uploadId&quot;,&quot;&quot;);</stringProp>
               <stringProp name="filename"></stringProp>
               <stringProp name="parameters"></stringProp>
               <boolProp name="resetInterpreter">false</boolProp>
-              <stringProp name="script">import org.apache.commons.io.FileUtils; 
-import org.apache.commons.lang3.RandomStringUtils; 
+              <stringProp name="script">import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.RandomUtils;
 import org.apache.commons.codec.binary.Base64;
-File myFile = File.createTempFile(&quot;upload-&quot;, &quot;.txt&quot; ); 
-FileUtils.writeStringToFile(myFile, RandomStringUtils.random( RandomUtils.nextInt( 1000, 100000 )), &quot;UTF-8&quot; ); 
+File myFile = File.createTempFile(&quot;upload-&quot;, &quot;.txt&quot; );
+FileUtils.writeStringToFile(myFile, RandomStringUtils.random( RandomUtils.nextInt( 1000, 100000 )), &quot;UTF-8&quot; );
 vars.put( &quot;filename&quot;, myFile.getCanonicalPath() );
 </stringProp>
             </BeanShellPreProcessor>
@@ -515,12 +515,12 @@ vars.put(&quot;uploadStatus&quot;,&quot;&quot;);
               <stringProp name="filename"></stringProp>
               <stringProp name="parameters"></stringProp>
               <boolProp name="resetInterpreter">false</boolProp>
-              <stringProp name="script">import org.apache.commons.io.FileUtils; 
-import org.apache.commons.lang3.RandomStringUtils; 
+              <stringProp name="script">import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.RandomUtils;
 import org.apache.commons.codec.binary.Base64;
-File myFile = File.createTempFile(&quot;upload-&quot;, &quot;.txt&quot; ); 
-FileUtils.writeStringToFile(myFile, new String(Base64.decodeBase64(&quot;WDVPIVAlQEFQWzRcUFpYNTQoUF4pN0NDKTd9JEVJQ0FSLVNUQU5EQVJELUFOVElWSVJVUy1URVNULUZJTEUhJEgrSCo=&quot;)), &quot;UTF-8&quot; ); 
+File myFile = File.createTempFile(&quot;upload-&quot;, &quot;.txt&quot; );
+FileUtils.writeStringToFile(myFile, new String(Base64.decodeBase64(&quot;WDVPIVAlQEFQWzRcUFpYNTQoUF4pN0NDKTd9JEVJQ0FSLVNUQU5EQVJELUFOVElWSVJVUy1URVNULUZJTEUhJEgrSCo=&quot;)), &quot;UTF-8&quot; );
 vars.put( &quot;filename&quot;, myFile.getCanonicalPath() );
 
 log.info(&quot;Decoding base64 format&quot;);
@@ -825,16 +825,16 @@ vars.put(&quot;uploadStatus&quot;,&quot;&quot;);
               <stringProp name="filename"></stringProp>
               <stringProp name="parameters"></stringProp>
               <boolProp name="resetInterpreter">false</boolProp>
-              <stringProp name="script">import org.apache.commons.io.FileUtils; 
-import org.apache.commons.lang3.RandomStringUtils; 
+              <stringProp name="script">import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.RandomUtils;
 import org.apache.commons.codec.binary.Base64;
 
-File file1 = File.createTempFile(&quot;upload-&quot;, &quot;.txt&quot; ); 
-FileUtils.writeStringToFile(file1, RandomStringUtils.random( RandomUtils.nextInt( 1000, 100000 )), &quot;UTF-8&quot; ); 
+File file1 = File.createTempFile(&quot;upload-&quot;, &quot;.txt&quot; );
+FileUtils.writeStringToFile(file1, RandomStringUtils.random( RandomUtils.nextInt( 1000, 100000 )), &quot;UTF-8&quot; );
 
-File file2 = File.createTempFile(&quot;upload-&quot;, &quot;.txt&quot; ); 
-FileUtils.writeStringToFile(file2, RandomStringUtils.random( RandomUtils.nextInt( 1000, 100000 )), &quot;UTF-8&quot; ); 
+File file2 = File.createTempFile(&quot;upload-&quot;, &quot;.txt&quot; );
+FileUtils.writeStringToFile(file2, RandomStringUtils.random( RandomUtils.nextInt( 1000, 100000 )), &quot;UTF-8&quot; );
 
 vars.put( &quot;filename1&quot;, file1.getCanonicalPath() );
 vars.put( &quot;filename2&quot;, file2.getCanonicalPath() );
@@ -1163,7 +1163,7 @@ vars.put(&quot;uploadId&quot;,&quot;&quot;);</stringProp>
 def sout = new StringBuilder(), serr = new StringBuilder()
 def proc = &apos;dd if=/dev/zero of=testfile bs=1000 count=500000&apos;.execute()
 proc.consumeProcessOutput(sout, serr)
-proc.waitForOrKill(2000)
+proc.waitFor()
 
 log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
             <stringProp name="scriptLanguage">groovy</stringProp>
@@ -1177,7 +1177,7 @@ log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
             <stringProp name="script">def sout = new StringBuilder(), serr = new StringBuilder()
 def proc = &apos;rm -rf testfile&apos;.execute()
 proc.consumeProcessOutput(sout, serr)
-proc.waitForOrKill(2000)
+proc.waitFor()
 
 
 log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
@@ -1326,7 +1326,7 @@ log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
 def sout = new StringBuilder(), serr = new StringBuilder()
 def proc = &apos;dd if=/dev/zero of=testfile bs=1000 count=1000000&apos;.execute()
 proc.consumeProcessOutput(sout, serr)
-proc.waitForOrKill(2000)
+proc.waitFor()
 
 
 log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
@@ -1341,7 +1341,7 @@ log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
             <stringProp name="script">def sout = new StringBuilder(), serr = new StringBuilder()
 def proc = &apos;rm -rf testfile&apos;.execute()
 proc.consumeProcessOutput(sout, serr)
-proc.waitForOrKill(2000)
+proc.waitFor()
 
 
 log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
@@ -1490,7 +1490,7 @@ log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
 def sout = new StringBuilder(), serr = new StringBuilder()
 def proc = &apos;dd if=/dev/zero of=testfile bs=1000 count=1500000&apos;.execute()
 proc.consumeProcessOutput(sout, serr)
-proc.waitForOrKill(2000)
+proc.waitFor()
 
 
 log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
@@ -1505,7 +1505,7 @@ log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
             <stringProp name="script">def sout = new StringBuilder(), serr = new StringBuilder()
 def proc = &apos;rm -rf testfile&apos;.execute()
 proc.consumeProcessOutput(sout, serr)
-proc.waitForOrKill(2000)
+proc.waitFor()
 
 
 log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
@@ -1654,7 +1654,7 @@ log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
 def sout = new StringBuilder(), serr = new StringBuilder()
 def proc = &apos;dd if=/dev/zero of=testfile bs=1000 count=2000000&apos;.execute()
 proc.consumeProcessOutput(sout, serr)
-proc.waitForOrKill(2000)
+proc.waitFor()
 
 
 log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
@@ -1669,7 +1669,7 @@ log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
             <stringProp name="script">def sout = new StringBuilder(), serr = new StringBuilder()
 def proc = &apos;rm -rf testfile&apos;.execute()
 proc.consumeProcessOutput(sout, serr)
-proc.waitForOrKill(2000)
+proc.waitFor()
 
 
 log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
@@ -1818,7 +1818,7 @@ log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
 def sout = new StringBuilder(), serr = new StringBuilder()
 def proc = &apos;dd if=/dev/zero of=testfile bs=1000 count=2500000&apos;.execute()
 proc.consumeProcessOutput(sout, serr)
-proc.waitForOrKill(2000)
+proc.waitFor()
 
 
 log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
@@ -1833,7 +1833,7 @@ log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
             <stringProp name="script">def sout = new StringBuilder(), serr = new StringBuilder()
 def proc = &apos;rm -rf testfile&apos;.execute()
 proc.consumeProcessOutput(sout, serr)
-proc.waitForOrKill(2000)
+proc.waitFor()
 
 
 log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
@@ -1982,7 +1982,7 @@ log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
 def sout = new StringBuilder(), serr = new StringBuilder()
 def proc = &apos;dd if=/dev/zero of=testfile bs=1000 count=3000000&apos;.execute()
 proc.consumeProcessOutput(sout, serr)
-proc.waitForOrKill(2000)
+proc.waitFor()
 
 
 log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
@@ -1997,7 +1997,7 @@ log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
             <stringProp name="script">def sout = new StringBuilder(), serr = new StringBuilder()
 def proc = &apos;rm -rf testfile&apos;.execute()
 proc.consumeProcessOutput(sout, serr)
-proc.waitForOrKill(2000)
+proc.waitFor()
 
 
 log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
@@ -2146,7 +2146,7 @@ log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
 def sout = new StringBuilder(), serr = new StringBuilder()
 def proc = &apos;dd if=/dev/zero of=testfile bs=1000 count=3500000&apos;.execute()
 proc.consumeProcessOutput(sout, serr)
-proc.waitForOrKill(2000)
+proc.waitFor()
 
 
 log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
@@ -2161,7 +2161,7 @@ log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
             <stringProp name="script">def sout = new StringBuilder(), serr = new StringBuilder()
 def proc = &apos;rm -rf testfile&apos;.execute()
 proc.consumeProcessOutput(sout, serr)
-proc.waitForOrKill(2000)
+proc.waitFor()
 
 
 log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
@@ -2310,7 +2310,7 @@ log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
 def sout = new StringBuilder(), serr = new StringBuilder()
 def proc = &apos;dd if=/dev/zero of=testfile bs=1000 count=4000000&apos;.execute()
 proc.consumeProcessOutput(sout, serr)
-proc.waitForOrKill(2000)
+proc.waitFor()
 
 
 log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
@@ -2325,7 +2325,7 @@ log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
             <stringProp name="script">def sout = new StringBuilder(), serr = new StringBuilder()
 def proc = &apos;rm -rf testfile&apos;.execute()
 proc.consumeProcessOutput(sout, serr)
-proc.waitForOrKill(2000)
+proc.waitFor()
 
 
 log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
