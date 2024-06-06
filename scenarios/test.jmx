@@ -1153,7 +1153,7 @@ vars.put(&quot;uploadId&quot;,&quot;&quot;);</stringProp>
             <stringProp name="parameters"></stringProp>
             <stringProp name="script">
 def sout = new StringBuilder(), serr = new StringBuilder()
-def proc = &apos;dd if=/dev/zero of=testfile bs=1000 count=100000&apos;.execute()
+def proc = &apos;dd if=/dev/random of=testfile bs=1000 count=100000&apos;.execute()
 proc.consumeProcessOutput(sout, serr)
 proc.waitFor()
 
@@ -1306,7 +1306,7 @@ log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
             <stringProp name="parameters"></stringProp>
             <stringProp name="script">
 def sout = new StringBuilder(), serr = new StringBuilder()
-def proc = &apos;dd if=/dev/zero of=testfile bs=1000 count=200000&apos;.execute()
+def proc = &apos;dd if=/dev/random of=testfile bs=1000 count=200000&apos;.execute()
 proc.consumeProcessOutput(sout, serr)
 proc.waitFor()
 
@@ -1459,7 +1459,7 @@ log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
             <stringProp name="parameters"></stringProp>
             <stringProp name="script">
 def sout = new StringBuilder(), serr = new StringBuilder()
-def proc = &apos;dd if=/dev/zero of=testfile bs=1000 count=300000&apos;.execute()
+def proc = &apos;dd if=/dev/random of=testfile bs=1000 count=300000&apos;.execute()
 proc.consumeProcessOutput(sout, serr)
 proc.waitFor()
 
@@ -1612,7 +1612,7 @@ log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
             <stringProp name="parameters"></stringProp>
             <stringProp name="script">
 def sout = new StringBuilder(), serr = new StringBuilder()
-def proc = &apos;dd if=/dev/zero of=testfile bs=1000 count=400000&apos;.execute()
+def proc = &apos;dd if=/dev/random of=testfile bs=1000 count=400000&apos;.execute()
 proc.consumeProcessOutput(sout, serr)
 proc.waitFor()
 
@@ -1765,7 +1765,7 @@ log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
             <stringProp name="parameters"></stringProp>
             <stringProp name="script">
 def sout = new StringBuilder(), serr = new StringBuilder()
-def proc = &apos;dd if=/dev/zero of=testfile bs=1000 count=500000&apos;.execute()
+def proc = &apos;dd if=/dev/random of=testfile bs=1000 count=500000&apos;.execute()
 proc.consumeProcessOutput(sout, serr)
 proc.waitFor()
 
@@ -1918,7 +1918,7 @@ log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
             <stringProp name="parameters"></stringProp>
             <stringProp name="script">
 def sout = new StringBuilder(), serr = new StringBuilder()
-def proc = &apos;dd if=/dev/zero of=testfile bs=1000 count=600000&apos;.execute()
+def proc = &apos;dd if=/dev/random of=testfile bs=1000 count=600000&apos;.execute()
 proc.consumeProcessOutput(sout, serr)
 proc.waitFor()
 
@@ -2071,7 +2071,7 @@ log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
             <stringProp name="parameters"></stringProp>
             <stringProp name="script">
 def sout = new StringBuilder(), serr = new StringBuilder()
-def proc = &apos;dd if=/dev/zero of=testfile bs=1000 count=700000&apos;.execute()
+def proc = &apos;dd if=/dev/random of=testfile bs=1000 count=700000&apos;.execute()
 proc.consumeProcessOutput(sout, serr)
 proc.waitFor()
 
@@ -2224,7 +2224,7 @@ log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
             <stringProp name="parameters"></stringProp>
             <stringProp name="script">
 def sout = new StringBuilder(), serr = new StringBuilder()
-def proc = &apos;dd if=/dev/zero of=testfile bs=1000 count=800000&apos;.execute()
+def proc = &apos;dd if=/dev/random of=testfile bs=1000 count=800000&apos;.execute()
 proc.consumeProcessOutput(sout, serr)
 proc.waitFor()
 
@@ -2377,7 +2377,7 @@ log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
             <stringProp name="parameters"></stringProp>
             <stringProp name="script">
 def sout = new StringBuilder(), serr = new StringBuilder()
-def proc = &apos;dd if=/dev/zero of=testfile bs=1000 count=900000&apos;.execute()
+def proc = &apos;dd if=/dev/random of=testfile bs=1000 count=900000&apos;.execute()
 proc.consumeProcessOutput(sout, serr)
 proc.waitFor()
 
@@ -2530,7 +2530,7 @@ log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
             <stringProp name="parameters"></stringProp>
             <stringProp name="script">
 def sout = new StringBuilder(), serr = new StringBuilder()
-def proc = &apos;dd if=/dev/zero of=testfile bs=1000 count=1000000&apos;.execute()
+def proc = &apos;dd if=/dev/random of=testfile bs=1000 count=1000000&apos;.execute()
 proc.consumeProcessOutput(sout, serr)
 proc.waitFor()
 
@@ -2684,7 +2684,7 @@ log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
             <stringProp name="parameters"></stringProp>
             <stringProp name="script">
 def sout = new StringBuilder(), serr = new StringBuilder()
-def proc = &apos;dd if=/dev/zero of=testfile bs=1000 count=1500000&apos;.execute()
+def proc = &apos;dd if=/dev/random of=testfile bs=1000 count=1500000&apos;.execute()
 proc.consumeProcessOutput(sout, serr)
 proc.waitFor()
 
@@ -2838,7 +2838,7 @@ log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
             <stringProp name="parameters"></stringProp>
             <stringProp name="script">
 def sout = new StringBuilder(), serr = new StringBuilder()
-def proc = &apos;dd if=/dev/zero of=testfile bs=1000 count=2000000&apos;.execute()
+def proc = &apos;dd if=/dev/random of=testfile bs=1000 count=2000000&apos;.execute()
 proc.consumeProcessOutput(sout, serr)
 proc.waitFor()
 
@@ -2992,7 +2992,7 @@ log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
             <stringProp name="parameters"></stringProp>
             <stringProp name="script">
 def sout = new StringBuilder(), serr = new StringBuilder()
-def proc = &apos;dd if=/dev/zero of=testfile bs=1000 count=2500000&apos;.execute()
+def proc = &apos;dd if=/dev/random of=testfile bs=1000 count=2500000&apos;.execute()
 proc.consumeProcessOutput(sout, serr)
 proc.waitFor()
 
@@ -3146,7 +3146,7 @@ log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
             <stringProp name="parameters"></stringProp>
             <stringProp name="script">
 def sout = new StringBuilder(), serr = new StringBuilder()
-def proc = &apos;dd if=/dev/zero of=testfile bs=1000 count=3000000&apos;.execute()
+def proc = &apos;dd if=/dev/random of=testfile bs=1000 count=3000000&apos;.execute()
 proc.consumeProcessOutput(sout, serr)
 proc.waitFor()
 
@@ -3300,7 +3300,7 @@ log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
             <stringProp name="parameters"></stringProp>
             <stringProp name="script">
 def sout = new StringBuilder(), serr = new StringBuilder()
-def proc = &apos;dd if=/dev/zero of=testfile bs=1000 count=3500000&apos;.execute()
+def proc = &apos;dd if=/dev/random of=testfile bs=1000 count=3500000&apos;.execute()
 proc.consumeProcessOutput(sout, serr)
 proc.waitFor()
 
@@ -3454,7 +3454,7 @@ log.info(&quot;out&gt; $sout\nerr&gt; $serr&quot;)</stringProp>
             <stringProp name="parameters"></stringProp>
             <stringProp name="script">
 def sout = new StringBuilder(), serr = new StringBuilder()
-def proc = &apos;dd if=/dev/zero of=testfile bs=1000 count=4000000&apos;.execute()
+def proc = &apos;dd if=/dev/random of=testfile bs=1000 count=4000000&apos;.execute()
 proc.consumeProcessOutput(sout, serr)
 proc.waitFor()
 
